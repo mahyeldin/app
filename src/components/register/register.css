@@ -121,4 +121,8 @@
     border-radius: 50%;
     text-align: center;
   }
-  
+  .err{
+    margin-left: 130px;
+    color: red;
+    margin-top: 6px;
+  }

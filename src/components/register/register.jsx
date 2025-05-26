@@ -1,7 +1,7 @@
 import './register.css'
 import React from 'react';
 import { Link ,useNavigate } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef , useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
@@ -15,7 +15,7 @@ export default function NewAccountForm() {
     const lastname = useRef(null)
     const phonenumber = useRef(null)
     const zip = useRef(null)
-
+    const [err , seterr] = useState('')
 
     const navigate = useNavigate();
 
@@ -36,7 +36,7 @@ export default function NewAccountForm() {
     .then((res)=>{
          navigate('/login')
     }).catch((err)=>{
-         console.log(err);
+         seterr('invalid input');;
     })
         
 }
@@ -57,12 +57,6 @@ export default function NewAccountForm() {
 
         <label>Password</label>
         <input type="password" placeholder="Entre password" ref={password} />
-        <ul className="password-hints">
-          <li>At least 8 characters</li>
-          <li>Mix of letters and numbers</li>
-          <li>At least 1 special character</li>
-          <li>At least 1 lowercase letter and 1 uppercase letter</li>
-        </ul>
 
         <div className="row">
           <div className="col">
@@ -82,6 +76,7 @@ export default function NewAccountForm() {
         <input type="text" placeholder="Phone number" ref={phonenumber} />
 
         <div  className="submit-btn"  onClick={handelclick}>Register</div>
+         <p className='err ml-100'>{err}</p>
 
         <div className="dividerregister" />
         <p className="connect-label">Or connect with:</p>

@@ -1,5 +1,5 @@
 import './logins.css'
-import React from 'react';
+import React, { useState } from 'react';
 import { Link ,useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import axios from 'axios';
@@ -12,6 +12,7 @@ export default function Login() {
   const email = useRef(null)
   const password = useRef(null)
   const navigate = useNavigate();
+  const [err , seterr] = useState('')
 
 
  function handelclick(){
@@ -28,6 +29,9 @@ export default function Login() {
            localStorage.setItem('user', JSON.stringify(res.data.user));
            localStorage.setItem('token', res.data.token);
              navigate('/home')
+        })
+        .catch((err)=>{
+          seterr('email or password not valid');
         })
             
   }
@@ -49,7 +53,8 @@ export default function Login() {
         <input type="password"  ref={password}  placeholder="Entre password" />
 
         <div  className="submit-btn" onClick={handelclick}>sign in</div>
-        
+          
+          <p className='err1'>{err}</p>
         </form>
 
         <div className="dividerlogin" />
