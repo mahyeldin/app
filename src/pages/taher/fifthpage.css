@@ -1,0 +1,156 @@
+/* Optional: Add a font like Inter if not already globally set */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap'); */
+
+.description-page-container {
+    display: flex;
+    flex-direction: column;
+    /* min-height: 100vh; Ensure it takes full height if it's the whole page */
+    max-width: 720px; /* Adjust as needed for your layout */
+    margin: 0 auto;   /* Center the container if it's block-level */
+    padding: 0 24px;  /* Horizontal padding */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.description-page-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.description-main-content {
+    flex-grow: 1; /* Allows footer to be pushed down */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.description-page-footer {
+    border-top: 1px solid #ebebeb;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to bottom if content is short and container has min-height */
+}
+
+.description-exit-button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.description-exit-button:hover {
+    background-color: #f7f7f7;
+}
+
+.description-page-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 32px; /* Space below title */
+}
+
+.description-textarea-container {
+    width: 100%;
+    max-width: 560px; /* Width of the textarea box */
+    position: relative; /* For character count positioning */
+}
+
+.description-textarea {
+    width: 100%;
+    height: 200px; /* Height of the textarea */
+    border: 1px solid #c4c4c4; /* Slightly darker border than previous examples */
+    border-radius: 12px;
+    padding: 16px; /* Padding inside the textarea */
+    font-family: inherit; /* Use the page's font */
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222222;
+    resize: vertical; /* Allow vertical resizing, disable horizontal */
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.description-textarea::placeholder {
+    color: #717171; /* Placeholder text color */
+    font-weight: 400;
+}
+
+.description-textarea:focus {
+    outline: none;
+    border-color: #000000; /* Black border on focus */
+    box-shadow: 0 0 0 1px #000000; /* Focus ring */
+}
+
+.description-char-count {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+    font-size: 12px;
+    color: #717171;
+}
+
+.description-progress-bar-container {
+    display: flex;
+    gap: 5px;
+    height: 4px;
+    margin-bottom: 24px;
+}
+
+.description-progress-segment {
+    flex-grow: 1;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    height: 100%;
+}
+
+.description-progress-segment.active {
+    background-color: #222222;
+}
+
+.description-navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-nav-button {
+    padding: 12px 24px;
+    border-radius: 20px; /* Pill shape for both buttons */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.description-back-button {
+    background-color: #ffffff;
+    color: #222222;
+    border: 1px solid #000000; /* Black border for back button */
+    font-weight: 500;
+}
+
+.description-back-button:hover {
+    background-color: #f7f7f7;
+}
+
+.description-next-button {
+    background-color: #0D6EFD; /* Blue from image */
+    color: white;
+}
+
+.description-next-button:hover {
+    background-color: #0b5ed7; /* Darker blue */
+}

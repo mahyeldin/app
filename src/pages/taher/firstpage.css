@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative; 
+    height: 100vh;/* For absolute positioning of exit button */
+}
+
+.exit-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #222;
+    width: 90px;
+    font-size: large;
+}
+
+.exit-button:hover {
+    background-color: #f7f7f7;
+    
+}
+.hhh-1{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #222;
+    margin-top: 60px; /* Space below exit button */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.options-container {
+    width: 100%;
+    max-width: 500px; /* Controls width of option cards */
+    margin-bottom: 40px;
+}
+
+.option-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.option-card:hover {
+    border-color: #888;
+}
+
+.option-card.selected {
+    border-color: #000;
+    box-shadow: 0 0 0 1px #000; /* Simulates a thicker border or focus ring */
+}
+
+.option-text .option-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.option-text .option-subtitle {
+    font-size: 14px;
+    color: #717171;
+}
+
+.option-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: #222;
+}
+
+.progress-bar-container {
+    width: 100%;
+    display: flex;
+    gap: 4px; /* Space between segments */
+    margin-bottom: 30px;
+    height: 4px;
+    padding: 0 10px; /* To prevent segments from touching edges if container is full width */
+    box-sizing: border-box;
+}
+
+.progress-segment {
+    flex-grow: 1;
+    background-color: #eaeaea; /* Light grey for inactive segments */
+    border-radius: 2px;
+}
+
+.progress-segment.active {
+    background-color: #222; /* Dark grey/black for active segment */
+}
+
+.navigation-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding if needed */
+    border: none; /* Light separator line */
+    margin-top: auto; /* Push to bottom if container has fixed height */
+}
+
+.nav-button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.back-button {
+    background-color: #c6c6c6;
+    color: #222;
+    border: 1px solid #fff; /* Can make it transparent or match bg */
+}
+.back-button:hover {
+    background-color: #a9a9a9; /* Subtle hover for back */
+}
+
+.next-button {
+    background-color: #0052cc; /* A nice blue */
+    color: white;
+}
+.next-button:hover {
+    background-color: #0041a3; /* Darker blue on hover */
+}
+.yyy{
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Placeholder icon styles if you don't use SVGs */
+/*
+.icon-placeholder {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+*/
+

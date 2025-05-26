@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+
+  }
+  
+  .form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 16px;
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-header h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 12px 0;
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    color: #333;
+    font-weight: 500;
+    margin-right: 30px;
+  }
+  
+  .form label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px;
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #eee;
+  }
+  
+  .password-hints {
+    list-style: none;
+    padding-left: 0;
+    font-size: 12px;
+    color: #555;
+    margin: 8px 0 16px;
+  }
+  
+  .password-hints li {
+    margin-bottom: 4px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  .submit-btn {
+    width: 40%;
+    margin: 24px auto 5px;
+    display: block;
+    background-color: #0041D9;
+    color: white;
+    padding: 7px 0;
+    border: none;
+    border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dividerregister {
+    border-top: 1px solid #ccc;
+    margin: 20px 0 10px;
+  }
+  
+  .connect-label {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
+  
+  .google-btn .circle {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+  }
+  
