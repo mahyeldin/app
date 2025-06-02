@@ -1,65 +1,47 @@
-import React, { useState } from "react";
-import './secendpage.css'; // We'll create this CSS file next
-import { Link } from "react-router-dom";
-// SVG Icon for Location Pin
-const LocationPinIcon = () => (
-    <svg className="location-pin-icon-svg" viewBox="0 0 24 24" fill="currentColor" height="1em" width="1em">
-        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" />
-    </svg>
-);
+import { useState } from "react";
+import './style.css'
 
-export default function LocationPage( { hotel , sethotel, active, setactive} ) {
-    const [name, setname] = useState("");
 
+
+
+
+
+export default function Firstpage( {active , setactive}) {
+   let display 
     function handelsend(){
-        sethotel({...hotel,name:name})
-        setactive(3);
+        setactive(7);
     }
     function handelback(){
-        setactive(1)
+        setactive(5)
+    }
+    if (active ==6){
+        display = true
     }
 
-    const totalProgressSegments = 7;
-    const activeProgressSegments = 2; // First two segments are active as per the image
-    let yes = false;
-     if (activeProgressSegments === active ){
-      yes = true
-    }
     return (
-         <> { yes &&
-        <div className="location-container">
-            <Link to={'/home'}><button className="exit-button">exit</button></Link>
-           <div className="hhh">
-            <div className="location-content-area">
-                <h1 className="location-title-heading">Where's your place name ?</h1>
-                <div className="location-input-wrapper">
-                    <input
-                        type="text"
-                        className="location-address-input"
-                        placeholder="Enter your hotel name"
-                        value={name}
-                        onChange={(e) => setname(e.target.value)}
-                    />
+        <>
+        { !display  ?  ""  : 
+            <div className="container">
+                <div className="bod">
+                    <h1 className="text-red-500">MON TESTAMENT</h1>
+                    <p>Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
+                    <p> J'atteste qu'il n'y a d'autre divinité qu’Allah qui mérite l’adoration, et j'atteste que Mohammad صلى الله عليه وسلم est Son Serviteur et Messager et
+                        que l'heure arrivera, pas de doute à son sujet, et qu'Allah ressuscitera ceux qui sont dans les tombeaux. <br />
+                        Je recommande à ma famille et mes proches et à tous ceux qui m’aiment d’invoquer en ma faveur le pardon et la miséricorde
+                        lorsqu’ils apprendront mon décès et qu’ils ne pleurent pas sur moi d’une manière exagérée ou en élevant la voix. <br />
+                    Je me désavoue de toute innovation ou péché que vous pourrez être amenés à faire lors de ma préparation et ce, jusqu’à
+                        mon enterrement. <br />
+                    Que ceux qui se trouveront dans le pays de ma mort n’informent pas mes enfants qui ne s’y trouvent pas, et encore
+                        moins les autres personnes, qu’après m’avoir enterré, et ce, pour que les sentiments n’entrent pas en jeu et qu’à cause
+                        de cela mon enterrement soit retardé, demandant au seigneur de le rencontrer alors qu’il m’a pardonné mes péchés
+                        antérieurs et ultérieurs… </p>
+                </div>
+                <div className="navigation-buttons">
+                    <button className="nav-button back-button" onClick={handelback}>Back</button>
+                    <button className="nav-button next-button" onClick={handelsend}>Next</button>
                 </div>
             </div>
-           </div>
-          <div className="yyy">
-            <div className="progress-bar-container">
-                {Array.from({ length: totalProgressSegments }).map((_, index) => (
-                    <div
-                        key={index}
-                        className={`progress-segment ${index < activeProgressSegments ? 'active' : ''}`}
-                    ></div>
-                ))}
-            </div>
-
-            <div className="navigation-buttons">
-                <button className="nav-button back-button" onClick={handelback}>Back</button>
-                <button className="nav-button next-button" onClick={handelsend}>Next</button>
-            </div>
-          </div>
-        </div>
-        }
+    }
     </>
     );
 }

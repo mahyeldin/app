@@ -1,69 +1,58 @@
-import './fifthpage.css'
-import React, { useState } from 'react';
+import { useState ,useRef } from "react";
+import './style.css'
 import { Link } from "react-router-dom";
 
-export default function Fifthpage( { hotel , sethotel, active, setactive } ) {
-    const [description, setDescription] = useState('');
-    const characterLimit = 500; // Example character limit
 
-    const handleDescriptionChange = (event) => {
-        setDescription(event.target.value);
-    };
+
+
+export default function Firstpage( {active , setactive , user , setuser}) {
+    const prénompere = useRef()
+    const nompere = useRef()
+    const prénommere = useRef()
+    const nommere = useRef()
+    let display 
     function handelsend(){
-       sethotel({...hotel,description:description})
-       setactive(7)
+        setuser({...user,prénompere:prénompere.current.value,nompere:nompere.current.value,prénommere:prénommere.current.value,nommere:nommere.current.value})
+        setactive(6);
     }
     function handelback(){
-        setactive(5)
+        setactive(4)
     }
-    const totalProgressSegments = 7;
-    const activeProgressSegments = 6; // As per image (6 dark segments)
-    let yes = false;
-     if (activeProgressSegments === active ){
-      yes = true
+    if (active ==5){
+        display = true
     }
+
     return (
-        <> { yes &&
-        <div className="container">
-            <header className="page-header">
-               <Link to={'/home'}><button className="exit-button">exit</button></Link>
-            </header>
-          <div className="hhh">
-            <main className="description-main-content">
-                <h1 className="description-page-title">Create your description</h1>
-
-                <div className="description-textarea-container">
-                    <textarea
-                        className="description-textarea"
-                        placeholder="Share what makes your place special."
-                        value={description}
-                        onChange={handleDescriptionChange}
-                        maxLength={characterLimit} // Optional: Enforce a max length
-                        aria-label="Place description"
-                    />
-                    <div className="description-char-count">
-                        {description.length}/{characterLimit}
+        <>
+        { !display  ?  ""  : 
+            <div className="container">
+                    <div className="pt-6 space-y-2">
+                        <h3 className="text-xl font-bold">MON TESTAMENT</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label>
+                            Nom du père: 
+                            <input type="text" ref={nompere} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
+                        </label>
+                        <label>
+                            Prénom du père :
+                            <input type="text" ref={prénompere} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
+                        </label>
+                        <label>
+                            Nom de la mère :
+                            <input type="text" ref={nommere} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
+                        </label>
+                        <label>
+                            Prénom de la mère :
+                            <input type="text" ref={prénommere} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
+                        </label>
+                        </div>
                     </div>
+                <div className="navigation-buttons">
+                    <button className="nav-button back-button" onClick={handelback}>Back</button>
+                    <button className="nav-button next-button" onClick={handelsend}>Next</button>
                 </div>
-            </main>
-          </div>
-          <div className="yyy">
-            <div className="progress-bar-container">
-                {Array.from({ length: totalProgressSegments }).map((_, index) => (
-                    <div
-                        key={index}
-                        className={`progress-segment ${index < activeProgressSegments ? 'active' : ''}`}
-                    ></div>
-                ))}
             </div>
-
-            <div className="navigation-buttons">
-                <button className="nav-button back-button" onClick={handelback}>Back</button>
-                <button className="nav-button next-button" onClick={handelsend}>Next</button>
-            </div>
-           </div>
-        </div>
-        }
+    }
     </>
     );
 }
