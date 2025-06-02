@@ -10,7 +10,7 @@ export default function Seven( {active , setactive ,settoday}) {
    const date = useRef()
    const location = useRef()
     function handelsend(){
-        settoday({date:date.current.value,location:location.current.value})
+        settoday({location:location.current.value})
         setactive(14);
     }
     function handelback(){
@@ -30,10 +30,6 @@ export default function Seven( {active , setactive ,settoday}) {
                     <label className="mt-5">
                         Fait à :
                         <input type="text" ref={location} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
-                    </label>
-                    <label>
-                        Date du jour:
-                        <input type="date" ref={date} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
                     </label>
              </div>
                 <div className="navigation-buttons">

@@ -4,6 +4,8 @@ import {  Document,  Packer,  Paragraph,  TextRun, } from "docx";
 
 const DownloadWordButton = ( { active ,user, laveuse, imam, cimetiere, responsable, creanciers,  today , mesbiens , distribue}) => {
   let display;
+  const date = new Date(); 
+  const formattedDate = date.toLocaleDateString('en-US');
     if (active ==14){
         display = true
     }
@@ -101,7 +103,7 @@ const DownloadWordButton = ( { active ,user, laveuse, imam, cimetiere, responsab
 
             new Paragraph(""),
             new Paragraph(`Fait à : ${today.location}`),
-            new Paragraph(`Le : ${today.date}`),
+            new Paragraph(`Le : ${formattedDate}`),
           ],
         },
       ],
