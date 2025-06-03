@@ -78,7 +78,7 @@ export default function Seven( {active , setactive , setdistribue , setmesbiens 
                         {mesbiens.map((item, index) => (
                             <>
                                 <p key={index} >
-                                {index+1}. {item}
+                                 {index+1}. <span style={{fontWeight:'bold',fontSize:'18px'}}>  {item}</span>
                                 </p>
                                 <button
                                 onClick={() => handleDelete(index)}

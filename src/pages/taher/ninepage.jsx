@@ -32,9 +32,9 @@ export default function Seven( {active , setactive , setcimetiere , setresponsab
                     <div className="bod">
                         <h1 className="text-red-500 font-bold">Mon enterrement</h1>
                         <p>Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
-                        <p className="mt-10">Je souhaite être enterré le plus rapidement possible au cimetière le plus proche de mon lieu de décès.</p>
-                        <p className="mt-10">Si je meurs dans un pays musulman, je choisis d’être enterré dans ce même pays le plus rapidement possible pour éviter les contraintes à mes proches.</p>
-                        <label className="mt-5">
+                        <p>Je souhaite être enterré le plus rapidement possible au cimetière le plus proche de mon lieu de décès.</p>
+                        <p style={{marginBottom:"3%"}}>Si je meurs dans un pays musulman, je choisis d’être enterré dans ce même pays le plus rapidement possible pour éviter les contraintes à mes proches.</p>
+                        <label className="mt-10">
                             Sinon, je souhaite être enterré au cimetière de :
                             <input type="text" ref={cimetiere} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
                         </label>

@@ -63,10 +63,10 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
             <div className="container">
                <div className="bod">
                     <h1 className="text-red-500 font-bold">Mes dettes</h1>
-                    <p>Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
-                    <p className="mt-10">Je n’ai aucun jour de jeûne à rattraper</p>
-                    <p className="">Je n’ai aucune dette.</p>
-                    <p className="">Voici la liste de mes dettes :</p>
+                    <p className="mb-1">Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
+                    <p className="mb-1">Je n’ai aucun jour de jeûne à rattraper</p>
+                    <p className="mb-1">Je n’ai aucune dette.</p>
+                    <p className="mb-10">Voici la liste de mes dettes :</p>
                     <label className="mt-5">
                         Nom du créancier :
                         <input type="text" ref={creanciername} className="mt-1 block w-full border border-gray-300 p-2 rounded" />
@@ -82,9 +82,9 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
                     <button className="add-butt" onClick={handeladd} >{editIndex !== null ? 'Update' : 'Add'}</button>
                     <p className="mt-3">
                         {creanciers.map((item, index) => (
-                            <>
-                                <p key={index} >
-                                {index+1}. {item.creanciername} / contact: {item.creanciercontact} / Montant:{item.creancierprice}
+                            <div className="mb-1">
+                                <p key={index} style={{fontSize:'18px'}}>
+                                {index+1}.  {item.creanciername} /<span style={{fontWeight:'bold'}}>contact</span>: {item.creanciercontact} /<span style={{fontWeight:'bold'}}> Montant</span> : {item.creancierprice}
                                 </p>
                                 <button
                                 onClick={() => handleDelete(index)}
@@ -92,8 +92,8 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
                                 backgroundColor: 'red',
                                 color: 'white',
                                 border: 'none',
-                                padding: '5px 10px',
-                                borderRadius: '4px',
+                                padding: '3px 7px',
+                                borderRadius: '3px',
                                 cursor: 'pointer'
                                 }}
                                 >
@@ -114,7 +114,7 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
                                 >
                                 Edit
                                 </button>
-                          </>
+                          </div>
                         ))}
                         </p>
                     <p>Si une personne me doit de l’argent, je lui en fais grâce</p>
