@@ -28,13 +28,6 @@ export default function Seven( {active , setactive , setdistribue , setmesbiens 
             alert('Vous ne pouvez pas saisir un élément vide.');
             return;
         } 
-    
-        
-        const exists = mesbiens.some(item => item.toLowerCase() === value.toLowerCase());
-        if (exists) {
-          alert('Item already exists!');
-          return;
-        }
 
         if (editIndex !== null) {
             // Update existing item
