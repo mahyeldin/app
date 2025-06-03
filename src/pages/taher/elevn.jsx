@@ -24,7 +24,10 @@ export default function Seven( {active , setactive , setdistribue , setmesbiens 
     }
     const handeladd = () => {
         const value = bien.current.value.trim();
-        if (value === '') return;
+        if (value === ''){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+        } 
     
         
         const exists = mesbiens.some(item => item.toLowerCase() === value.toLowerCase());

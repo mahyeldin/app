@@ -18,7 +18,7 @@ export default function Firstpage( {active , setactive}) {
         <>
         { !display  ?  ""  : 
             <div className="container ">
-                    <div className="flex items-center justify-center h-screen  text-white text-2xl font-bold">
+                    <div className="flex items-center justify-center   text-white text-2xl font-bold">
                     WWW.WASSIYA.FR
                     </div>
                 <div className="navigation-buttons">

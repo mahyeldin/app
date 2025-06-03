@@ -12,6 +12,10 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
     const creancierprice = useRef() ;
     const [editIndex, setEditIndex] = useState(null);
     function handeladd(){
+        if ( creanciername.current.value.trim() =='' || creanciercontact.current.value.trim() =='' || creancierprice.current.value.trim() ==''){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+        }
         if (editIndex !== null) {
             const updated = [...creanciers];
             updated[editIndex].creanciername = creanciername.current.value;

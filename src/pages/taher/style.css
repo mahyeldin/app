@@ -5,14 +5,13 @@ body{
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 90%;
     position: relative; 
-    height: 100vh;
+    min-height: 90vh;
     border: 2px solid white ;
-    margin: auto;
-    margin-top: 15px;
-    height: 95vh;
+    margin: 15px auto;
     border-radius: 20px;
     padding: 0 50px;
 
@@ -28,8 +27,6 @@ body{
     font-weight: 600;
     cursor: pointer;
     border: none;
-    position: absolute;
-    bottom: 10px;
 }
 
 .back-button {
@@ -86,9 +83,7 @@ body{
     transition: 0.2s ease;
     cursor: pointer;  
     display: block;
-    position: fixed;
-    bottom: 120px;
-    
+
 
 }
 .download-butt:hover {
