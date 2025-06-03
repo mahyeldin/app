@@ -10,6 +10,10 @@ export default function Seven( {active , setactive , setcimetiere , setresponsab
     const responsablecontact =useRef();
     
     function handelsend(){
+        if ( responsable.current.value.trim() =='' || responsablecontact.current.value.trim() =='' || cimetiere.current.value.trim() =='' ){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }        
         setcimetiere({cimetiere:cimetiere.current.value})
         setresponsable({responsable:responsable.current.value,responsablecontact:responsablecontact.current.value})
         setactive(10);

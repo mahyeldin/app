@@ -15,13 +15,12 @@ export default function Firstpage( {active , setactive , user, setuser }) {
 
    let display 
     function handelsend(){
-        // console.log(prénom.current.value)
-        // console.log(nom.current.value)
-        // console.log(date.current.value)
-        // console.log(ville.current.value)
-        // console.log(pays.current.value)
+        if ( prénom.current.value.trim() =='' || nom.current.value.trim() =='' || date.current.value.trim() =='' || ville.current.value.trim() =='' || pays.current.value.trim() =='' ){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }
         setuser({prénom:prénom.current.value,nom:nom.current.value,date:date.current.value,ville:ville.current.value,pays:pays.current.value})
-        setactive(5);
+        setactive(5); 
     }
     function handelback(){
         setactive(32)

@@ -10,6 +10,10 @@ export default function Seven( {active , setactive , setimam}) {
     const imam = useRef();
     const imamcontact = useRef();
     function handelsend(){
+        if ( imam.current.value.trim() =='' || imamcontact.current.value.trim() =='' ){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }
         setimam({imam:imam.current.value,imamcontact:imamcontact.current.value})
         setactive(9);
     }

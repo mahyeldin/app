@@ -10,6 +10,10 @@ export default function Seven( {active , setactive , setlaveuse}) {
    const Laveuse =useRef();
    const laveusecontact = useRef();
     function handelsend(){
+        if ( Laveuse.current.value.trim() =='' || laveusecontact.current.value.trim() ==''  ){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }        
         setlaveuse({ laveuse:Laveuse.current.value, laveusecontact:laveusecontact.current.value})
         setactive(8);
     }

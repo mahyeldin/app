@@ -2,15 +2,7 @@ import React from 'react'
 
 function tweleve({active , setactive  }) {
    let display 
-//    console.log(user)
-//    console.log(laveuse)
-//    console.log(imam)
-//    console.log(cimetiere)
-//    console.log(responsable)
-//    console.log(creanciers)
-//    console.log(distribue)
-//    console.log(mesbiens)
-   
+
     function handelsend(){
         setactive(13);
     }

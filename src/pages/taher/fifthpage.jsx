@@ -12,6 +12,10 @@ export default function Firstpage( {active , setactive , user , setuser}) {
     const nommere = useRef()
     let display 
     function handelsend(){
+        if ( prénompere.current.value.trim() =='' || nompere.current.value.trim() =='' || prénommere.current.value.trim() =='' || nommere.current.value.trim() ==''){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }
         setuser({...user,prénompere:prénompere.current.value,nompere:nompere.current.value,prénommere:prénommere.current.value,nommere:nommere.current.value})
         setactive(6);
     }

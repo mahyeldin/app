@@ -7,9 +7,12 @@ import { Link } from "react-router-dom";
 
 export default function Seven( {active , setactive ,settoday}) {
    let display 
-   const date = useRef()
    const location = useRef()
     function handelsend(){
+        if ( location.current.value.trim() =='' ){
+            alert('Vous ne pouvez pas saisir un élément vide.');
+            return;
+       }    
         settoday({location:location.current.value})
         setactive(14);
     }
