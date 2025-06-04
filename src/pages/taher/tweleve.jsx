@@ -17,10 +17,10 @@ function tweleve({active , setactive  }) {
         { !display  ?  ""  : 
             <div className="container">
                 <div className="bod">
-                    <h1 className="text-red-500 text-2xl font-bold">
+                    <h1 className="text-red-500 text-2xl font-bold mb-1">
                     Mon testament
                     </h1>
-                    <p className='mb-15'>Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
+                    <p className='mb-1'>Vous devez cocher les cases que vous souhaitez faire apparaître sur votre testament</p>
                     <p>Allah, permet moi de remercier les bienfaits que Tu m’as octroyés, à moi et mes parents, et de faire de bonnes actions qui Te
                     satisfassent et améliore ma descendance. Je me repentis à Toi et je suis du nombre des musulmans. </p>
                 </div>

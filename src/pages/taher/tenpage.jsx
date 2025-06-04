@@ -83,7 +83,7 @@ export default function Seven( {active , setactive , creanciers ,setcreanciers})
                     <p className="mt-3">
                         {creanciers.map((item, index) => (
                             <div className="mb-1">
-                                <p key={index} style={{fontSize:'18px'}}>
+                                <p key={index} style={{fontSize:'22px'}}>
                                 {index+1}.  {item.creanciername} /<span style={{fontWeight:'bold'}}>contact</span>: {item.creanciercontact} /<span style={{fontWeight:'bold'}}> Montant</span> : {item.creancierprice}
                                 </p>
                                 <button

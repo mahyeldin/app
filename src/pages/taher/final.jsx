@@ -80,7 +80,7 @@ const DownloadWordButton = ( { active ,user, laveuse, imam, cimetiere, responsab
             new Paragraph({ text: "Mes dettes", bold: true }),
             ...(creanciers.length > 0
               ? creanciers.map((d, i) =>
-                  new Paragraph(`${i + 1}. ${d.creanciername} – ${d.creanciercontact} – ${d.creancierprice}`)
+                  new Paragraph(`${i + 1}. name: ${d.creanciername} – Coordonnées: ${d.creanciercontact} – Montant: ${d.creancierprice}`)
                 )
               : [new Paragraph("Je n’ai aucune dette.")]),
 
